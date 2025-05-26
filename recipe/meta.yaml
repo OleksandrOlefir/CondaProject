@@ -1,0 +1,26 @@
+package:
+  name: conda-project
+  version: "1.0"
+
+source:
+  path: ..
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - cmake
+    - nlohmann_json
+    - {{ compiler('cxx') }}
+  format: tar.bz2
+  script_env:
+    - ARCH
+
+test:
+  commands:
+    - conda-project
+
+about:
+  summary: "C++ project using custom JSON and Crypto libraries"
+  license: MIT
