@@ -35,7 +35,7 @@ make
 ./conda-project
 ```
 
-> **Note:** Make sure you have `cmake` and a C++17-capable compiler installed.
+> **Note:** Make sure you have `cmake` and a C++11-capable compiler installed.
 
 ---
 
@@ -145,7 +145,7 @@ FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmp.../Scripts/con
 
 ### Root Cause
 
-The `conda convert` command expects Python entry points or scripts (like `conda-project-script.py`) inside the `Scripts/` folder when converting to Windows. However, since this project is a **compiled C++ binary** (not a Python script), such files do not exist. This is a **known limitation** of `conda convert` when used with non-Python packages.
+The `conda convert` command expects Python entry points or scripts (like `conda-project-script.py`) inside the `Scripts/` folder when converting to Windows. If the project is a **compiled C++ binary** (not a Python script), such files do not exist. This is a **known limitation** of `conda convert` when used with non-Python packages.
 
 ### Fix Options
 
