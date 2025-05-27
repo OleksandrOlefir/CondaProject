@@ -15,6 +15,6 @@ cd build
 cmake "${SRC_DIR}" -DCMAKE_INSTALL_PREFIX="$PREFIX"
 make -j$(nproc)
 
-ctest || echo "No tests run"
+ctest
 
 install -Dm755 conda-project "$PREFIX/bin/conda-project"

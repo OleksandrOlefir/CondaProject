@@ -7,15 +7,22 @@ source:
 
 build:
   number: 0
+  format: tar.bz2
+  script_env:
+    - ARCH=64
 
 requirements:
   build:
     - cmake
     - nlohmann_json
     - {{ compiler('cxx') }}
-  format: tar.bz2
-  script_env:
-    - ARCH
+  host:
+    - nlohmann_json
+    - libgcc
+  run:
+    - libgcc >=12
+    - libstdcxx >=12
+    - libcxx >=12
 
 test:
   commands:

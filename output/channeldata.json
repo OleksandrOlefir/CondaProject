@@ -1,1 +1,0 @@
-{"channeldata_version":1,"packages":{"conda-project":{"activate.d":false,"binary_prefix":false,"deactivate.d":false,"license":"MIT","post_link":false,"pre_link":false,"pre_unlink":false,"run_exports":{},"subdirs":["linux-64"],"summary":"C++ project using custom JSON and Crypto libraries","text_prefix":false,"timestamp":1748298037,"version":"1.0"}},"subdirs":["linux-64","noarch"]}
